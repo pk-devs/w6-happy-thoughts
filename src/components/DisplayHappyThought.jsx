@@ -1,7 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import { format } from "date-fns"
-// import { formatRelative } from "date-fns"
+import { parseISO, formatDistanceToNow } from "date-fns"
 
 export const DisplayHappyThought = () => {
   
@@ -64,8 +63,8 @@ export const DisplayHappyThought = () => {
                 <p>x {thought.hearts}</p>
               </div>
               
-              {/* <div>{formatRelative(thought.createdAt, new Date())}</div> */}
-              <div>{format(new Date(thought.createdAt), 'yyyy-MM-dd, HH:mm')}</div>
+              <div>{formatDistanceToNow(parseISO(thought.createdAt), new Date())} ago</div>
+              {/* <div>{format(new Date(thought.createdAt), 'yyyy-MM-dd, HH:mm')}</div> */}
             </div>
           </div>
         ))}

@@ -18,6 +18,12 @@ code {
   padding: 0;
 }
 
+.app {
+  justify-content: center;
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+}
+
 /* Header component */
 
 .parent {
@@ -51,6 +57,7 @@ code {
   padding-left: 15px;
   margin-bottom: 50px;
   margin-top: 50px;
+  word-break: break-word;
 }
 
 .write-happy-t input {
@@ -71,8 +78,7 @@ code {
 }
 
 .individual-happy-thought {
-  
-  border: 1px solid #cccccc; /* Light grey border */
+  border: 1px solid #cccccc; 
   padding: 15px;
   margin-bottom: 20px; 
   background-color: #f9f9f9;
@@ -80,7 +86,7 @@ code {
   width: 650px; 
   border: 1px solid rgb(105,105,105);
   box-shadow: 10px 10px 0px 0px black;
-
+  word-break: break-word;
 
 }
 
@@ -131,8 +137,16 @@ button {
 
 @media screen and (max-width: 768px) {
   .write-happy-t input {
-    padding: 8px; /* Reduced padding for smaller screens */
-    font-size: 0.9rem; /* Smaller font size for placeholder */
+    padding: 8px; 
+    font-size: 0.9rem; 
+
+  }
+
+  .individual-happy-thought {
+    padding: 15px;
+    margin-bottom: 20px; 
+    width: 350px; 
+    word-break: break-word;
   }
 }
 

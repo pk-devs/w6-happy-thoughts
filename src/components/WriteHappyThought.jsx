@@ -1,13 +1,11 @@
 import { useState } from "react"
 
-export const WriteHappyThought = () => {
+export const WriteHappyThought = ( { onNewThought }) => {
     const [happyThought, setHappyThought] = useState("")
 
     const handleHappyThought = (event) => {
         setHappyThought(event.target.value)
     }
-
-  
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -28,6 +26,7 @@ export const WriteHappyThought = () => {
         .then(() => {
             alert("Your good vibe was sent")
             setHappyThought("")
+            onNewThought()
         })
         .catch(error => console.error("Error:", error))
     }
